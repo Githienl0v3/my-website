@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🥳Happy Birthday To You🎉</title>
+    <link rel="icon" href="/img/giphy.gif">
+    <link rel="stylesheet" href="/css/happy.css" />
+  </head>
+  <body>
+    <div class="happy-container">
+      <div class="img-happy">
+        <div class="img-cake">
+          <img src="/img/cake.png" alt="" width="300px" />
+        </div>
+      </div>
+    </div>
+    <div class="text-cake">
+      <div class="text-contain">
+        <p>You have <span id="timer">45</span>s for watching this my love❤</p>
+      <div class="play-icon">
+          <audio id="audioPlayer" autoplay>
+            <source src="/audio/best-happy-birthday-to-you-happy-birthday-songs-2020-made-with-Voicemod.mp3" type="audio/mp3" />
+          </audio>
+        </div>
+      </div>
+    </div>
+    <script>
+      let timeLeft = 45;
+        const timerElement = document.getElementById('timer');
+
+        const countdown = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                timerElement.innerHTML = "Time's up!";
+            } else {
+                timerElement.innerHTML = timeLeft;
+                timeLeft--;
+            }
+        }, 1000);
+    </script>
+    <script src="/js/login.js"></script>
+  </body>
+</html>
